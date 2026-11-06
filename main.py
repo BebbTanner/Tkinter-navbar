@@ -1,7 +1,7 @@
 import tkinter as tk
 
 def navigate(pageName):
-    contentLabel.config(text = f"Welcome to the {pageName} page!")
+    contentLabel.config(text = f"You selected: {pageName}")
 
 # Window parameters
 
@@ -31,19 +31,16 @@ btnStyles = {
 
 # Button configurations.
 
-homeBtn = tk.Button(navbar, text = "Home", command=lambda: navigate("Home"), **btnStyles)
+homeBtn = tk.Button(navbar, text = "Rock", command=lambda: navigate("Rock"), **btnStyles)
 homeBtn.pack(side = "left", fill = "y")
 
-profileBtn = tk.Button(navbar, text = "Profile", command=lambda: navigate("Profile"), **btnStyles)
+profileBtn = tk.Button(navbar, text = "Paper", command=lambda: navigate("Paper"), **btnStyles)
 profileBtn.pack(side = "left", fill = "y")
 
-settingsBtn = tk.Button(navbar, text = "Settings", command=lambda: navigate("Settings"), **btnStyles)
+settingsBtn = tk.Button(navbar, text = "Scissors", command=lambda: navigate("Scissors"), **btnStyles)
 settingsBtn.pack(side = "left", fill = "y")
 
-logoutBtn = tk.Button(navbar, text = "Logout", command=lambda: navigate("Logout"), **btnStyles)
-logoutBtn.pack(side = "left", fill = "y")
-
-contentLabel = tk.Button(root, text = "Select a page from the navbar", font = ("Arial", 14), bg = "#f0f0f0")
+contentLabel = tk.Button(root, text = "Please make a choice", font = ("Arial", 14), bg = "#f0f0f0")
 contentLabel.pack(expand = True)
 
 # Main loop 
